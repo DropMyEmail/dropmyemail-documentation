@@ -21,6 +21,8 @@ The following instructions assumes you are the admin on the PA. First log in as 
 - On the __Applications__ page, click on __Import Package__. Select the local file option, and select the Dropmyemail APS package from your local drive.
 - Click __Submit__
 
+<iframe src="//player.vimeo.com/video/93035312" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035312">install-aps-package</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 ### Connecting Dropmyemail to PA
 
 Now we need to hook up the Dropmyemail API server to the PA.
@@ -60,3 +62,35 @@ Once done, we need to create the service template. The following is an example o
 - Click __Finish__
 
 The service template is not active yet. You need to click on the template and click on __Activate__ to enable it.
+
+### Add service plan
+
+Now we need to create the service plan.
+
+- Click on __Billing__ on the top right corner. This should lead you to PBA.
+- Click on __Service Plans__ under __Products__.
+- Click on __Add New Service Plan__
+- Select __Generic Service Plan__ and click __Next__
+- Choose the service template defined earlier and click __Next__
+- Fill in the details for the service plans and click __Next__
+- Define your billing period for the plans. Change the fees accordingly and click __Next__.
+- Select all the resources and click __Next__
+- Set a number for __Inc. Amount__ and __Max Amount__. There is no limit to the resources. So we use an arbitrarily large number. For __Recurring Fee__, set a fee only for the __Seat__ resource. Click __Next__ when done.
+- Select the sales categories and click __Next__
+- View throught the summary and click __Finish__
+
+### Provision Order
+
+The following flow is not necessary. We show this to create a mock order from a customer.
+
+- Click on __Orders__
+- Click on __Add New Order__
+- Select a customer for __Account__
+- Select the previously created service plan for __Service Plan__
+- Select a subscription period for __Subscription Period__
+- Click __Next__
+- Enter the domain name and click __Next__
+- Go through the order summary and click __Place Order__
+- Select the order from the list and click __Open Order__ to complete the order
+
+Once done your customer would be subscribed to the service
