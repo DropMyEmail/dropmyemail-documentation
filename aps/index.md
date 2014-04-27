@@ -21,7 +21,7 @@ The following instructions assumes you are the admin on the PA. First log in as 
 - On the __Applications__ page, click on __Import Package__. Select the local file option, and select the Dropmyemail APS package from your local drive.
 - Click __Submit__
 
-<iframe src="//player.vimeo.com/video/93035312" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035312">install-aps-package</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="//player.vimeo.com/video/93035312" width="800" height="501" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035312">install-aps-package</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 ### Connecting Dropmyemail to PA
 
@@ -34,6 +34,8 @@ Now we need to hook up the Dropmyemail API server to the PA.
 - For the next form, enter a name that identifies the partner for the __Name__ field. _Eg. Critical Email_
 - For the __Authentication Token__ field, enter the token provided by Dropmyemail.
 - Click __Finish__
+
+<iframe src="//player.vimeo.com/video/93035310" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035310">install-application</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 ### Defining the service
 
@@ -63,6 +65,8 @@ Once done, we need to create the service template. The following is an example o
 
 The service template is not active yet. You need to click on the template and click on __Activate__ to enable it.
 
+<iframe src="//player.vimeo.com/video/93035311" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035311">define-service</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 ### Add service plan
 
 Now we need to create the service plan.
@@ -79,6 +83,8 @@ Now we need to create the service plan.
 - Select the sales categories and click __Next__
 - View throught the summary and click __Finish__
 
+<iframe src="//player.vimeo.com/video/93035176" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035176">add-service-plan</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 ### Provision Order
 
 The following flow is not necessary. We show this to create a mock order from a customer.
@@ -94,3 +100,11 @@ The following flow is not necessary. We show this to create a mock order from a 
 - Select the order from the list and click __Open Order__ to complete the order
 
 Once done your customer would be subscribed to the service
+
+<iframe src="//player.vimeo.com/video/93035313" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035313">provision-order</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+### Customer view
+
+The following shows the customer control panel once it has been installed.
+
+<iframe src="//player.vimeo.com/video/93035177" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035177">customer-control-panel</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
