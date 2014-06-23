@@ -108,3 +108,10 @@ Once done your customer would be subscribed to the service
 The following shows the customer control panel once it has been installed.
 
 <iframe src="//player.vimeo.com/video/93035177" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035177">customer-control-panel</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+
+### Journal Set up view
+
+Here is how it looks when trying to enable journaling for an email account.
+
+<iframe src="//player.vimeo.com/video/97099883" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/97099883">pa-dme-journaling-setup</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
