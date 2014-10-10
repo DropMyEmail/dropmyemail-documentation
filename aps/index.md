@@ -30,7 +30,7 @@ Now we need to hook up the Dropmyemail API server to the PA.
 - On the __Applications__ page, click on the package __Dropmyemail__
 - On the __Dropmyemail__ package page, click on the __Instances__ tab
 - On the __Instances__ tab, click on __Install__
-- For the __Application API end-point URI__ field, enter _http://api.staging-dropmyemail.com/v1/aps_
+- For the __Application API end-point URI__ field, enter _https://api.staging.dropmyemail.com/v1/aps_
 - For the next form, enter a name that identifies the partner for the __Name__ field. _Eg. Critical Email_
 - For the __Authentication Token__ field, enter the token provided by Dropmyemail.
 - Click __Finish__
