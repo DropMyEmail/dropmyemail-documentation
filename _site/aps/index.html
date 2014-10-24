@@ -58,6 +58,7 @@
                       <div class="accordion-inner nav-accordion-inner">
                         <ul>
                           <li><a href="/aps">Intro</a></li>
+                          <li><a href="/aps/installation">Installing our package</a></li>
                           <li><a href="/aps/trial">Trying our package</a></li>
                         </ul>
                       </div>
@@ -71,127 +72,33 @@
 	      <div class="c-panel">
 		<h2>Parallels APS</h2>
 
-<p>Dropmyemail provides a package to be installed on Parallels Automation. Currently we only support APS v2.0. We will show you the steps to install a white labelled package. For the purpose of this document, we will use a psuedo name called <strong>Critical Email</strong> for the white label partner. Do replace the name with your company&#39;s name when applicable.</p>
-
-<h3>Pre-requisites</h3>
-
-<p>Please obtain the package from us. We will also provide you with the authentication token for the package.</p>
-
-<h3>Installation of the package on PA</h3>
-
-<p>The following instructions assumes you are the admin on the PA. First log in as admin.</p>
+<p>Dropmyemail is an independent software vendor that provides compliant email backup and archive solutions. We provide an APS package that can be installed on Parallels Automation. Currently we only support <strong>APS v2.0</strong>. Please visit the relevant sections to find the information you need.</p>
 
 <ul>
-<li>Click on <strong>Applications</strong>.</li>
-<li>On the <strong>Applications</strong> page, click on <strong>Import Package</strong>. Select the local file option, and select the Dropmyemail APS package from your local drive.</li>
-<li>Click <strong>Submit</strong></li>
+<li><a href="/aps/installation">Installing our package</a></li>
+<li><a href="/aps/trial">Trying our package</a></li>
 </ul>
 
-<p><iframe src="//player.vimeo.com/video/93035312" width="800" height="501" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035312">install-aps-package</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+<h3>What can Dropmyemail Archive APS do for you</h3>
 
-<h3>Connecting Dropmyemail to PA</h3>
+<p>Our APS package integrates Dropmyemail with Parallels Automation seamlessly. Your customers will be able to archive their emails, contacts, calendars and tasks on Dropmyemail. Customers can log in via single-sign-on to Dropmyemail. They will be able to view their archived data, perform e-discovery and restore their data on the Dropmyemail web application. We offer unlimited storage and an unlimited retention period. Please visit our <a href="https://www.dropmyemail.com/business">website</a> for more information on other features.</p>
 
-<p>Now we need to hook up the Dropmyemail API server to the PA.</p>
+<h3>Business model of this application</h3>
+
+<p>Customers can are billed via seats. Each seat allows the customer to add one email account to be archived. Seats should be charged a fixed rate monthly or annually.</p>
+
+<h3>Application requirements</h3>
 
 <ul>
-<li>On the <strong>Applications</strong> page, click on the package <strong>Dropmyemail</strong></li>
-<li>On the <strong>Dropmyemail</strong> package page, click on the <strong>Instances</strong> tab</li>
-<li>On the <strong>Instances</strong> tab, click on <strong>Install</strong></li>
-<li>For the <strong>Application API end-point URI</strong> field, enter <em>https://api.staging.dropmyemail.com/v1/aps</em></li>
-<li>For the next form, enter a name that identifies the partner for the <strong>Name</strong> field. <em>Eg. Critical Email</em></li>
-<li>For the <strong>Authentication Token</strong> field, enter the token provided by Dropmyemail.</li>
-<li>Click <strong>Finish</strong></li>
+<li>Parallels Automation with APS 2 ready</li>
+<li>Exchange integrated with Parallels Automation</li>
 </ul>
 
-<p><iframe src="//player.vimeo.com/video/93035310" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035310">install-application</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+<h3>Technical integration details</h3>
 
-<h3>Defining the service</h3>
+<p>We require the partner to install our APS package as documented in our <a href="/aps/installation">installation instructions</a>.</p>
 
-<p>First we need to define the resources which we are selling. Then we need to define the service templates which sets the limit for the resources.</p>
-
-<ul>
-<li>Click on <strong>Resources</strong></li>
-<li>Click on <strong>Add New Resource Type</strong></li>
-<li>Click on <strong>Application Service Reference</strong>.</li>
-<li>Enter <strong>Dromyemail Archive</strong> for the <strong>Name</strong> field and click <strong>Next</strong></li>
-<li>Select <strong>Dropmyemail</strong></li>
-<li>You should see a series of screens with links. There should be only one link on each screen. Click on the links.</li>
-</ul>
-
-<p>There are 3 resources. Repeat the same steps with the following input.</p>
-
-<ul>
-<li>Dropmyemail Archiving: Application Service Reference</li>
-<li>Dropmyemail Customers: Application Service, automatic provisioning</li>
-<li>Dropmyemail Seats: Application Service, no automatic provisioning</li>
-</ul>
-
-<p>Once done, we need to create the service template. The following is an example of an unlimited plan.</p>
-
-<ul>
-<li>Click on <strong>Service Templates</strong></li>
-<li>Click on <strong>Add New Service Template</strong></li>
-<li>Enter <strong>Critical Email</strong> for the name field. This field will appear on the customer&#39;s subscription. It should be the name of your service. Also enable the <strong>Autoprovisioning</strong> checkbox. Use the default value <strong>Custom</strong> for the <strong>Type</strong> field. You may type anything for the <strong>Description</strong> field.</li>
-<li>Find the earlier 3 resources we&#39;ve defined, check them and click <strong>Next</strong></li>
-<li>Adjust the limit as you need and click <strong>Next</strong></li>
-<li>Click <strong>Finish</strong></li>
-</ul>
-
-<p>The service template is not active yet. You need to click on the template and click on <strong>Activate</strong> to enable it.</p>
-
-<p><iframe src="//player.vimeo.com/video/93035311" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035311">define-service</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
-
-<h3>Add service plan</h3>
-
-<p>Now we need to create the service plan.</p>
-
-<ul>
-<li>Click on <strong>Billing</strong> on the top right corner. This should lead you to PBA.</li>
-<li>Click on <strong>Service Plans</strong> under <strong>Products</strong>.</li>
-<li>Click on <strong>Add New Service Plan</strong></li>
-<li>Select <strong>Generic Service Plan</strong> and click <strong>Next</strong></li>
-<li>Choose the service template defined earlier and click <strong>Next</strong></li>
-<li>Fill in the details for the service plans and click <strong>Next</strong></li>
-<li>Define your billing period for the plans. Change the fees accordingly and click <strong>Next</strong>.</li>
-<li>Select all the resources and click <strong>Next</strong></li>
-<li>Set a number for <strong>Inc. Amount</strong> and <strong>Max Amount</strong>. There is no limit to the resources. So we use an arbitrarily large number. For <strong>Recurring Fee</strong>, set a fee only for the <strong>Seat</strong> resource. Click <strong>Next</strong> when done.</li>
-<li>Select the sales categories and click <strong>Next</strong></li>
-<li>View throught the summary and click <strong>Finish</strong></li>
-</ul>
-
-<p><iframe src="//player.vimeo.com/video/93035176" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035176">add-service-plan</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
-
-<h3>Provision Order</h3>
-
-<p>The following flow is not necessary. We show this to create a mock order from a customer.</p>
-
-<ul>
-<li>Click on <strong>Orders</strong></li>
-<li>Click on <strong>Add New Order</strong></li>
-<li>Select a customer for <strong>Account</strong></li>
-<li>Select the previously created service plan for <strong>Service Plan</strong></li>
-<li>Select a subscription period for <strong>Subscription Period</strong></li>
-<li>Click <strong>Next</strong></li>
-<li>Enter the domain name and click <strong>Next</strong></li>
-<li>Go through the order summary and click <strong>Place Order</strong></li>
-<li>Select the order from the list and click <strong>Open Order</strong> to complete the order</li>
-</ul>
-
-<p>Once done your customer would be subscribed to the service</p>
-
-<p><iframe src="//player.vimeo.com/video/93035313" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035313">provision-order</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
-
-<h3>Customer view</h3>
-
-<p>The following shows the customer control panel once it has been installed.</p>
-
-<p><iframe src="//player.vimeo.com/video/93035177" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035177">customer-control-panel</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
-
-<h3>Journal Set up view</h3>
-
-<p>Here is how it looks when trying to enable journaling for an email account.</p>
-
-<p><iframe src="//player.vimeo.com/video/97099883" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/97099883">pa-dme-journaling-setup</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+<p>Next, we need to configure your Exchange servers to establish a link between your servers to our servers. The link is necessary for automated provisioning. As each partner&#39;s setup is different, our technical team will be in touch with you to help you with the set up.</p>
 
 	      </div>
             </div>
