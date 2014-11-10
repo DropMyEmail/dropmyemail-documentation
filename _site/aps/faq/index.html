@@ -66,35 +66,45 @@
             </div>
             <div class="span9">
 	      <div class="c-panel">
-		<h2>Parallels APS</h2>
+		<h2>Frequently Asked Questions</h2>
 
-<p>Dropmyemail is an independent software vendor that provides compliant email backup and archive solutions. We provide an APS package that can be installed on Parallels Automation. Currently we only support <strong>APS v2.0</strong>. Please visit the relevant sections to find the information you need.</p>
+<h3>Provisioning steps</h3>
 
-<ul>
-<li><a href="/aps/installation">Installing our package</a></li>
-<li><a href="/aps/trial">Trying our package</a></li>
-</ul>
+<p>Below are the steps we perform on Exchange via automated scipts.</p>
 
-<h3>What can Dropmyemail Archive APS do for you</h3>
+<h4>Connect via WinRM</h4>
 
-<p>Our APS package integrates Dropmyemail with Parallels Automation seamlessly. Your customers will be able to archive their emails, contacts, calendars and tasks on Dropmyemail. Customers can log in via single-sign-on to Dropmyemail. They will be able to view their archived data, perform e-discovery and restore their data on the Dropmyemail web application. We offer unlimited storage and an unlimited retention period. Please visit our <a href="https://www.dropmyemail.com/business">website</a> for more information on other features.</p>
+<p>We connect to Exchange via <a href="http://msdn.microsoft.com/en-us/library/aa384426">Windows Remote Management</a></p>
 
-<h3>Business model of this application</h3>
+<h4>Create a distribution group.</h4>
 
-<p>Customers can are billed via seats. Each seat allows the customer to add one email account to be archived. Seats should be charged a fixed rate monthly or annually.</p>
+<p>A distribution group is like a mailing list. We create one to group the users whom we want to receive emails from.</p>
 
-<h3>Application requirements</h3>
+<h4>Add the users into the distribution group</h4>
 
-<ul>
-<li>Parallels Automation with APS 2 ready</li>
-<li>Exchange integrated with Parallels Automation</li>
-</ul>
+<p>Users added to the group automatically gets his or her emails journaled.</p>
 
-<h3>Technical integration details</h3>
+<h4>Create a mailbox which will act as the journal recipient</h4>
 
-<p>We require the partner to install our APS package as documented in our <a href="/aps/installation">installation instructions</a>.</p>
+<p>A regular mailbox is created which will function as the journal recipient.</p>
 
-<p>Next, we need to configure your Exchange servers to establish a link between your servers to our servers. The link is necessary for automated provisioning. As each partner&#39;s setup is different, our technical team will be in touch with you to help you with the set up.</p>
+<h4>Create journal rule</h4>
+
+<p>Finally we create a journal rule which states that all emails sent to users belonging to the distribution group, should have their emails sent to the journal recipient.</p>
+
+<p>In the case of removal, we remove all the objects created in Exchange(journal rule, mailbox and distribution group). Leaving the mailbox alone. Let me explore other use cases.</p>
+
+<h3>When the user changes his password or email</h3>
+
+<p>For journaling even if the password changes, emails will still be sent to the journal recipient. For changes in email itself, our package registers itself to listen to changes in the account. When there are changes, PA will notify us. Our server will then query PA to get the latest changes.</p>
+
+<h3>How about email aliases?</h3>
+
+<p>We track email aliases. They do not count to the seat, hence does not add to the pricing. Aliases will be linked to the account and shown in the interface.</p>
+
+<h3>How about disk usage?</h3>
+
+<p>We remove the emails from the journal account once we have archived them. They do not add to the disk space on your servers.</p>
 
 	      </div>
             </div>
