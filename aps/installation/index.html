@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>APS</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/css/apidoc.css">
+    <link rel="stylesheet" type="text/css" href="/css/apidoc-responsive.css">
+
+  </head>
+  <body>
+
+    <div id="wrap">
+      <!--header-->
+      <div class="navbar navbar-inverse navbar-fixed-top">
+    	<div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/">
+	      <img src="/images/chrome/dropmyemail_logo.png">
+	    </a>
+          </div>
+        </div>
+      </div>
+
+      <!--body-->
+      <div class="container top-margin-fix">
+
+	<div class="container-dashboard clearfix">
+	  <h2 class="title-main">Dropmyemail Documentation</h2>
+          <div class="row">
+            <div class="span3">
+              <div class="n-panel">
+                <!--accordian-->
+                <div class="accordion" id="nav-accordion">
+
+                  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse1">
+                        APS
+                      </a>
+                    </div>
+                    <div id="collapse1" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/aps">Intro</a></li>
+                          <li><a href="/aps/installation">Installing our package</a></li>
+                          <li><a href="/aps/trial">Trying our package</a></li>
+                          <li><a href="/aps/faq">Frequently Asked Questions</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div><!-- /accordian-->
+              </div>
+            </div>
+            <div class="span9">
+	      <div class="c-panel">
+		<h2>Parallels APS</h2>
+
+<p>Dropmyemail provides a package to be installed on Parallels Automation. Currently we only support APS v2.0. We will show you the steps to install a white labelled package. For the purpose of this document, we will use a psuedo name called <strong>Critical Email</strong> for the white label partner. Do replace the name with your company&#39;s name when applicable.</p>
+
+<h3>Pre-requisites</h3>
+
+<p>Please obtain the package from us. We will also provide you with the authentication token for the package.</p>
+
+<h3>Installation of the package on PA</h3>
+
+<p>The following instructions assumes you are the admin on the PA. First log in as admin.</p>
+
+<ul>
+<li>Click on <strong>Applications</strong>.</li>
+<li>On the <strong>Applications</strong> page, click on <strong>Import Package</strong>. Select the local file option, and select the Dropmyemail APS package from your local drive.</li>
+<li>Click <strong>Submit</strong></li>
+</ul>
+
+<p><iframe src="//player.vimeo.com/video/93035312" width="800" height="501" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035312">install-aps-package</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+<h3>Connecting Dropmyemail to PA</h3>
+
+<p>Now we need to hook up the Dropmyemail API server to the PA.</p>
+
+<ul>
+<li>On the <strong>Applications</strong> page, click on the package <strong>Dropmyemail</strong></li>
+<li>On the <strong>Dropmyemail</strong> package page, click on the <strong>Instances</strong> tab</li>
+<li>On the <strong>Instances</strong> tab, click on <strong>Install</strong></li>
+<li>For the <strong>Application API end-point URI</strong> field, enter <em>https://api.staging.dropmyemail.com/v1/aps</em></li>
+<li>For the next form, enter a name that identifies the partner for the <strong>Name</strong> field. <em>Eg. Critical Email</em></li>
+<li>For the <strong>Authentication Token</strong> field, enter the token provided by Dropmyemail.</li>
+<li>Click <strong>Finish</strong></li>
+</ul>
+
+<p><iframe src="//player.vimeo.com/video/93035310" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035310">install-application</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+<h3>Defining the service</h3>
+
+<p>First we need to define the resources which we are selling. Then we need to define the service templates which sets the limit for the resources.</p>
+
+<ul>
+<li>Click on <strong>Resources</strong></li>
+<li>Click on <strong>Add New Resource Type</strong></li>
+<li>Click on <strong>Application Service Reference</strong>.</li>
+<li>Enter <strong>Dromyemail Archive</strong> for the <strong>Name</strong> field and click <strong>Next</strong></li>
+<li>Select <strong>Dropmyemail</strong></li>
+<li>You should see a series of screens with links. There should be only one link on each screen. Click on the links.</li>
+</ul>
+
+<p>There are 3 resources. Repeat the same steps with the following input.</p>
+
+<ul>
+<li>Dropmyemail Archiving: Application Service Reference</li>
+<li>Dropmyemail Customers: Application Service, automatic provisioning</li>
+<li>Dropmyemail Seats: Application Service, no automatic provisioning</li>
+</ul>
+
+<p>Once done, we need to create the service template. The following is an example of an unlimited plan.</p>
+
+<ul>
+<li>Click on <strong>Service Templates</strong></li>
+<li>Click on <strong>Add New Service Template</strong></li>
+<li>Enter <strong>Critical Email</strong> for the name field. This field will appear on the customer&#39;s subscription. It should be the name of your service. Also enable the <strong>Autoprovisioning</strong> checkbox. Use the default value <strong>Custom</strong> for the <strong>Type</strong> field. You may type anything for the <strong>Description</strong> field.</li>
+<li>Find the earlier 3 resources we&#39;ve defined, check them and click <strong>Next</strong></li>
+<li>Adjust the limit as you need and click <strong>Next</strong></li>
+<li>Click <strong>Finish</strong></li>
+</ul>
+
+<p>The service template is not active yet. You need to click on the template and click on <strong>Activate</strong> to enable it.</p>
+
+<p><iframe src="//player.vimeo.com/video/93035311" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035311">define-service</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+<h3>Add service plan</h3>
+
+<p>Now we need to create the service plan.</p>
+
+<ul>
+<li>Click on <strong>Billing</strong> on the top right corner. This should lead you to PBA.</li>
+<li>Click on <strong>Service Plans</strong> under <strong>Products</strong>.</li>
+<li>Click on <strong>Add New Service Plan</strong></li>
+<li>Select <strong>Generic Service Plan</strong> and click <strong>Next</strong></li>
+<li>Choose the service template defined earlier and click <strong>Next</strong></li>
+<li>Fill in the details for the service plans and click <strong>Next</strong></li>
+<li>Define your billing period for the plans. Change the fees accordingly and click <strong>Next</strong>.</li>
+<li>Select all the resources and click <strong>Next</strong></li>
+<li>Set a number for <strong>Inc. Amount</strong> and <strong>Max Amount</strong>. There is no limit to the resources. So we use an arbitrarily large number. For <strong>Recurring Fee</strong>, set a fee only for the <strong>Seat</strong> resource. Click <strong>Next</strong> when done.</li>
+<li>Select the sales categories and click <strong>Next</strong></li>
+<li>View throught the summary and click <strong>Finish</strong></li>
+</ul>
+
+<p><iframe src="//player.vimeo.com/video/93035176" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035176">add-service-plan</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+<h3>Provision Order</h3>
+
+<p>The following flow is not necessary. We show this to create a mock order from a customer.</p>
+
+<ul>
+<li>Click on <strong>Orders</strong></li>
+<li>Click on <strong>Add New Order</strong></li>
+<li>Select a customer for <strong>Account</strong></li>
+<li>Select the previously created service plan for <strong>Service Plan</strong></li>
+<li>Select a subscription period for <strong>Subscription Period</strong></li>
+<li>Click <strong>Next</strong></li>
+<li>Enter the domain name and click <strong>Next</strong></li>
+<li>Go through the order summary and click <strong>Place Order</strong></li>
+<li>Select the order from the list and click <strong>Open Order</strong> to complete the order</li>
+</ul>
+
+<p>Once done your customer would be subscribed to the service</p>
+
+<p><iframe src="//player.vimeo.com/video/93035313" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035313">provision-order</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+<h3>Customer view</h3>
+
+<p>The following shows the customer control panel once it has been installed.</p>
+
+<p><iframe src="//player.vimeo.com/video/93035177" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/93035177">customer-control-panel</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+<h3>Journal Set up view</h3>
+
+<p>Here is how it looks when trying to enable journaling for an email account.</p>
+
+<p><iframe src="//player.vimeo.com/video/97099883" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/97099883">pa-dme-journaling-setup</a> from <a href="http://vimeo.com/user27367572">Wong Liang Zan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+	      </div>
+            </div>
+          </div>
+	</div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+    	<div class="container-general">
+          <ul class="footer-menu clearfix">
+            <li><a href="http://www.dropmyemail.com/about_us">About</a></li>
+            <li><a href="mailto:support@dropmyemail.com">Support</a></li>
+            <li><a href="http://engineering.dropmyemail.com">Blog</a></li>
+          </ul>
+          <hr>
+          <div class="footer-copyright">Copyright 2013-2014 Dropmysite Pte Ltd.  All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

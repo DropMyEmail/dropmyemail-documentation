@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>APS</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/css/apidoc.css">
+    <link rel="stylesheet" type="text/css" href="/css/apidoc-responsive.css">
+
+  </head>
+  <body>
+
+    <div id="wrap">
+      <!--header-->
+      <div class="navbar navbar-inverse navbar-fixed-top">
+    	<div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/">
+	      <img src="/images/chrome/dropmyemail_logo.png">
+	    </a>
+          </div>
+        </div>
+      </div>
+
+      <!--body-->
+      <div class="container top-margin-fix">
+
+	<div class="container-dashboard clearfix">
+	  <h2 class="title-main">Dropmyemail Documentation</h2>
+          <div class="row">
+            <div class="span3">
+              <div class="n-panel">
+                <!--accordian-->
+                <div class="accordion" id="nav-accordion">
+
+                  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse1">
+                        APS
+                      </a>
+                    </div>
+                    <div id="collapse1" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/aps">Intro</a></li>
+                          <li><a href="/aps/installation">Installing our package</a></li>
+                          <li><a href="/aps/trial">Trying our package</a></li>
+                          <li><a href="/aps/faq">Frequently Asked Questions</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div><!-- /accordian-->
+              </div>
+            </div>
+            <div class="span9">
+	      <div class="c-panel">
+		<h2>Trying out Dropmyemail APS package</h2>
+
+<p>We provide a sandbox for testing our package. This sandbox allows you to try the provisioning process. There are some limitations with the sandbox. The sandbox is confined within a private virtual network. It does not have access to the public Internet. As such it cannot receive or send emails. We can only demonstrate the journal setup process.</p>
+
+<p>To try our package with working Exchange email accounts, please contact our <a href="mailto:sales@dropmyemail.com">sales team</a> for further instructions.</p>
+
+<h3>Install VPN Client</h3>
+
+<p>To access the VPN, you need a VPN client. We are using the OpenVPN protocol. Please <a href="https://s3-ap-southeast-1.amazonaws.com/static.documentation.dropmyemail.com/dropmyemail.vpn.zip">download the certificates</a> necessary to access the VPN. It is password protected, please approach us for the password.</p>
+
+<p>If you are on Windows, please follow the instructions <a href="http://doc.apsstandard.org/portal/sandbox/vpn-win/">here</a></p>
+
+<p>If you are on Mac, please follow the instructions <a href="http://doc.apsstandard.org/portal/sandbox/vpn-macos/">here</a></p>
+
+<h3>Logging into the customer control panel</h3>
+
+<p>Please login to the panel using the following</p>
+
+<ul>
+<li>url: <a href="https://z.hexlync.apsdemo.org/single.html">https://z.hexlync.apsdemo.org/single.html</a></li>
+<li>login: katherine</li>
+<li>password: nxcHS~-5[B</li>
+</ul>
+
+<h3>The home screen</h3>
+
+<p>Upon logging in, you should be greeted with the home screen.</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/static.documentation.dropmyemail.com/pa-home-screen.png"/></p>
+
+<p>This is the first page your customer would see. The package screen could be found by clicking on <strong>Fictional Archive</strong>.</p>
+
+<h3>The archive screen</h3>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/static.documentation.dropmyemail.com/pa-archive-screen.png" /></p>
+
+<p>We show a table of email accounts that is present in the customer&#39;s subscription. It is always kept in sync with changes in the customer&#39;s email accounts.</p>
+
+<p>To add an account for archiving, select the account and click <strong>Add</strong>. To disable, simply select an account and click <strong>Remove</strong>. The setup could take about 5 minutes.</p>
+
+<p>In the background, our servers will communicate with the Parallels Automation system to get information about the email accounts, such as the password and other settings. Our servers will then setup journaling on the Exchange server. Next, the archiving process will kick in and retrieve the emails onto our servers for archival. The entire process is automated. Notice all the user needs to do is to click <strong>Add</strong>. The status shown here depicts the progress of the journal setup(setting up journaling on Exchange). The archival process generally takes longer.</p>
+
+<h3>Logging in to Dropmyemail APS admin dashboard</h3>
+
+<p>The Dropmyemail admin dashboard can be accessed by clicking on the <strong>Login to Fictional Archive</strong> button. It automatically logs the user into Dropmyemail Archive.</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/static.documentation.dropmyemail.com/dme-aps-dashboard.png"/></p>
+
+<p>In here you will find all the features present in our Archive product, such as viewing emails, search, downloading of emails, migrate or restoring of emails. The user interface can be customized such that it becomes white labelled with your brand. You may also choose to disable specific features such as migration.</p>
+
+<h3>Adding more email accounts</h3>
+
+<p>If you want to add more email accounts on the sandbox to see the syncing, please click on <strong>Hosted Exchange</strong> entry in the dropdown found on the top right corner of the page.</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/static.documentation.dropmyemail.com/pa-subscriptions-box.png" /></p>
+
+<p>You should be led to the home screen of the <strong>Hosted Exchange</strong> package. Click on the <strong>Emails</strong> tab and add the mailbox.</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/static.documentation.dropmyemail.com/pa-email-screen.png" /></p>
+
+<p>If there are any questions, please do not hesitate to contact our <a href="mailto:sales@dropmyemail.com">sales team</a>.</p>
+
+	      </div>
+            </div>
+          </div>
+	</div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+    	<div class="container-general">
+          <ul class="footer-menu clearfix">
+            <li><a href="http://www.dropmyemail.com/about_us">About</a></li>
+            <li><a href="mailto:support@dropmyemail.com">Support</a></li>
+            <li><a href="http://engineering.dropmyemail.com">Blog</a></li>
+          </ul>
+          <hr>
+          <div class="footer-copyright">Copyright 2013-2014 Dropmysite Pte Ltd.  All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
