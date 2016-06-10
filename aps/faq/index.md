@@ -40,3 +40,13 @@ We track email aliases. They do not count to the seat, hence does not add to the
 ### How about disk usage?
 
 We remove the emails from the journal account once we have archived them. They do not add to the disk space on your servers.
+
+### How to remove email from archive?
+
+If you do not wish to keep emails archived with Dropmyemail anymore, you can remove it via Customer Controller Panel (CCP). Please note that the mailbox must remain in OSA before trying to remove it from Dropmyemail archives. Once you remove it, you loose all the archives of the email.
+
+If you wish to continue accessing the existing email archives, we recommend you to de-activate particular email address at Dropmyemail Dashboard by selecting the particular mail box and clicking De-Activate button.
+
+In your CCP, check the tick box of already enabled email and then click on Remove button. Removal process might take few minutes to complete.
+
+If you have already deleted your mailbox from OSA and need to remove email from Dropmyemail archives, please contact our <a href="mailto:support@dropmyemail.com">support team</a>.
